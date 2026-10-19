@@ -1,0 +1,508 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #252525;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+iframe{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 3px solid #00274C ;
+    border-radius: 0.5rem;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+h1{
+    margin: 0 0 1rem;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+
+h2{
+    margin: 0 0 1rem;
+    color: #00274C;
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    font-weight:549;
+    
+}
+
+
+h3{
+    color: #00274C;
+    font-size: 1.2rem;
+    font-weight:500;
+}
+
+p,
+li,
+a{
+    overflow-wrap: anywhere;
+}
+
+a{
+    color: #00274c;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 0.09em;
+}
+
+a:hover{
+    text-decoration-thickness: 0.09em;
+}
+
+a:focus-visible{
+    outline: 3px solid #ffcb05;
+    outline-offset: 4px;
+    border-radius: 0.15rem;
+    /* This is for the skip */
+}
+
+section{
+    margin-block: 2rem;
+}
+
+
+main{
+    width: 100%;
+    background-color: #fff;
+    max-width: 80rem;
+    min-width: 0;
+    margin-inline: 0;
+    padding: 1rem;
+}
+
+main > section{
+    min-width: 0;
+}
+
+header > a[href="#main"]{
+    position: absolute;
+    top: -65px;
+    left: 0;
+    z-index: 1000;
+    padding: 0.5rem;
+    color: #00274C;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+header > a[href="#main"]:focus{
+    top: 25px;
+    left: 0.8rem;
+    outline: 3px solid #fff;
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* one value to change */
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    color: #fff;
+    background-color: #00274c;
+    border-bottom: 0.35rem solid #ffcb05;
+    align-items: end;
+    height: auto;
+    padding: 1rem;
+}
+
+header img{
+    width: min(100%, 15rem);
+    height: auto;
+    margin-inline: auto;
+}
+
+header h1{
+    margin-block: 0.5rem;
+    color: #fff;
+    /* grid-column: 1/-1; */
+}
+
+nav{
+    min-width: 0;
+    padding: 0.76rem 0;
+    background-color: #00274c;
+    border-bottom: 1px solid #fbfff4;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li{
+    min-width: 0;
+    margin: 0;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 48px;
+    height: 100%;
+    padding: 0.7rem 0.5rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    background-color: #123b60;
+    border: 1px solid #8195a9;
+    overflow-wrap: anywhere;
+}
+
+nav a:hover{
+    color: #00274C;
+    background-color: #fff;
+    border-color: #8195a9;
+}
+
+
+nav a[aria-current="page"]{
+    color: #00274c;
+    font-weight: bold;
+    background-color: #ffcb05;
+    border: 2px solid #ffcb05;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+main > section:nth-of-type(3){
+    margin-block: 3rem;
+    padding-block: 1.5rem;
+    background-color: #fff;
+    border-bottom: 1px solid #d4dce5;
+}
+
+main > section:nth-of-type(3) > h2{
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    color: #00274C;
+    border-bottom: 4px solid #ffcb05;
+    line-height: 1.3;
+}
+
+main > section:nth-of-type(3) > p{
+    max-width: 50rem;
+    margin: 0 0 2rem;
+    color: #252525;
+}
+
+.resource-benefits-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    width: 100%;
+    min-width: 0;
+    margin-block: 1.5rem;
+}
+
+.resource-benefits-layout > *{
+    min-width: 0;
+    margin-block: 0;
+}
+
+.resource-benefits-layout > img{
+    display: block;
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+    margin-inline: auto;
+    border: 1px solid #d4dce5;
+    border-radius: 0.6rem;
+}
+
+.resource-benefits-layout > ul{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-content: start;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.resource-benefits-layout > ul > li{
+    min-width: 0;
+    margin: 0;
+    padding: 0 0 1rem 1rem;
+    background-color: #f5f7fa;
+    border-left: 3px solid #ffcb05;
+    border-radius: 0.5rem;
+}
+
+.resource-benefits-layout > ul > li > strong{
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #00274C;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+
+main > section:nth-of-type(4),
+main > section:nth-of-type(5){
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-block: 2.5rem;
+}
+
+main > section:nth-of-type(4) > h2,
+main > section:nth-of-type(4) > p,
+main > section:nth-of-type(5) > h2,
+main > section:nth-of-type(5) > p{
+    grid-column: 1 / -1;
+}
+
+main > section:nth-of-type(4) > h2,
+main > section:nth-of-type(5) > h2{
+    justify-self: start;
+    align-self: start;
+    margin-bottom: 0.25rem;
+}
+
+main article{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border: 1px solid #d4dce5;
+    padding: 1.25rem;
+    border-top: 0.25rem solid #00274c;
+    border-bottom: 0.15rem solid #00274c;
+    border-radius: 0.5rem;
+    background-color: #f5f5f5;
+    transition:border-color 0.2s ease, box-shadow 0.2s ease;  
+}
+
+main article:hover{
+    border-top-color: #ffcb05;
+    box-shadow: 0 2px 6px lightgray;
+}
+
+main article h3{
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+main article p{
+    flex-grow: 1;
+    margin-block: 0.5rem 1rem;
+}
+
+main article a{
+    display: inline-block;
+    align-self: flex-start;
+    min-height: 44px;
+    max-width: 100%;
+    padding: 0.54rem 0.8rem;
+    color: #005a9c;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    overflow-wrap: anywhere;
+}
+
+main article a:hover{
+    color: #00274C;
+    background-color: #fff3b0;
+}
+
+main > section > h2{
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 0;
+    line-height: 1.3;
+    color: #00274C;
+    border-bottom: 4px solid #ffcb05;
+}
+
+main > aside{
+    min-width: 0;
+    margin-block: 2rem;
+    border: 1px solid #d4dce5;
+    padding: 1.25rem;
+    border-left: 0.35rem solid #ffcb05;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-color: #f5f7fa;
+}
+
+main > aside p:last-child{
+    margin-bottom: 0;
+}
+
+main > aside a{
+    display: inline-block;
+    min-height: 44px;
+    max-width: 100%;
+    padding-block: 0.5rem;
+    overflow-wrap: anywhere;
+    font-weight: bold;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 1rem;
+    padding: 1.5rem 1rem;
+    color: #fff;
+    background-color: #00274c;
+    border-top: 0.35rem solid #ffcb05;
+}
+
+footer h2,
+footer h3{
+    color: #fff;
+}
+
+footer p{
+    margin-block: 0.5rem;
+    overflow-wrap: anywhere;
+}
+
+footer a{
+    display: inline-block;
+    min-height: 44px;
+    max-width: 100%;
+    padding-block: 0.5rem;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    overflow-wrap: anywhere;
+}
+
+footer a:hover{
+    color: #ffcb05;
+}
+
+footer address{
+    font-style: normal;
+    overflow-wrap: anywhere;
+}
+
+.value-narrative-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    width: 100%;
+    min-width: 0;
+    margin-block: 1.5rem;
+}
+
+.value-narrative-layout > *{
+    min-width: 0;
+    margin-block: 0;
+}
+
+.value-narrative-layout img{
+    display: block;
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+    margin-inline: auto;
+    border: 1px solid #d4dce5;
+    border-radius: 0.6rem;
+}
+.value-narrative-layout h3{
+    margin-bottom: 1.5rem;
+
+}
+
+.value-narrative-layout figcaption{
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.value-narrative-layout ul{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-content: start;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.value-narrative-layout li{
+    min-width: 0;
+    margin: 0;
+    padding: 0 0 1rem 1rem;
+    background-color: #f5f7fa;
+    border-left: 3px solid #ffcb05;
+    border-radius: 0.5rem;
+}
+
+.value-narrative-layout li > strong{
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #00274C;
+    font-size: 1.05rem;
+    font-weight: bold;   
+}
+
+main > section.track-b-section{
+    display: block;
+    margin-block: 2rem;
+}
+
+
+/*
+AI Assistance: U-M GPT
+Prompt: "How can I use a CSS media query to reduce animations, transitions and smooth scrolling for users who prefer reduced motion, while keeping my website accessible?
+
+I used U-M GPT for guidance and implemneting the prefer-reduced-motion media query and accordingly it was modified 
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
